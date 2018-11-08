@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../JS/utile.js"></script>
+	<script type="text/javascript" src="../JS/connection.js"></script>
+	<script type="text/javascript" src="../JS/affichageRecetteScript.js"></script>
+	<script type="text/javascript" src="../JS/burn.js"></script>
+	<link rel="stylesheet" type="text/css" href="../CSS/index.css">
+	<title>Recette</title>
+</head>
+
+<body>
+	<header>
+		<h1>COOK AND BURN</h1>
+		<nav>
+			<a href="../../index.html"><button>Accueil</button></a>
+			<div id='deconnectionDiv' style="display: none;">
+				<label for="connectionLogin">Identifiant : </label>
+				<input type="text" name="connectionLogin" id="connectionLogin">
+				<label for="connectionMdp">Mot de passe : </label>
+				<input type="password" name="connectionMdp" id="connectionMdp">
+				<button onclick="connection()">Connexion</button>
+			</div>
+			<div id='connectionDiv' style="display: none;">
+				<a href="creationRecette.html"><button>Création</button></a>
+				<a href="profil.html"><button>Profil</button></a>
+				<button onclick="deconnection()">Deconnexion</button>
+			</div>
+			<div id='onlyAdmin' style="display: none;">
+				<a href="parametre.html"><button>Paramètres</button></a>
+			</div>
+		</nav>
+	</header>
+
+	<div id="wait"><p>Merci de patienter</p></div>
+	<div id="notConnect" style="display: none;">
+		Vous devez être connecté pour accéder à cette page !
+	</div>
+	<div id="fail" style="display: none;">
+		<p>Oups la recette que vous essayez d'afficher n'existe pas, merci de cliquer sur le bouton pour revenir a l'accueil :)</p>
+		<a href="../../index.html"><button>Retour a l'accueil</button></a>
+	</div>
+	<div id="isConnect" style="display: none;">
+		<div id="win" style="display: none;">
+			<div id="contenu">
+				<h1 id="nomRecette"></h1>
+				<div class="nbrPersonne">
+					<p id="nbrPersonne"></p>
+				</div>
+				<div id="burn">
+					<button id="addBurn" onclick="addBurn()" style="display: none;">addBurn</button>
+					<button id="removeBurn" onclick="removeBurn()" style="display: none;">removeBurn</button>
+				</div>
+
+				<img class="img" id="imgRecette" src="https://vignette.wikia.nocookie.net/browmanwood/images/8/86/Point_d%27interrogation.png/revision/latest?cb=20130217173859&path-prefix=fr" alt="Image de la recette"/>
+			</div>
+
+			<div id="descriptionLongue"></div>
+			</br>
+
+			<div id="temps"></div>
+			</br>
+
+			<div id="nbrBurn"></div>
+			</br>
+
+			<div id="ingredients">Ingrédients :</div>
+			<br>
+
+			<div id="etapes">Etapes :</div>
+			<br>
+		</div>
+	</div>
+
+</body>
+
+</html>

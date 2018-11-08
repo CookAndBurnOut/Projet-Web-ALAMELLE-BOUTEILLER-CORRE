@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recuperation Mot de passe</title>
+    <script type="text/javascript" src="../JS/utile.js"></script>
+    <script type="text/javascript" src="../JS/recupMdp.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+  </head>
+  <body>
+    <h1>COOK AND BURN</h1>
+
+    <div id="input">
+      <label for="email">email : </label>
+      <input id="email" type="text" name="email" maxlength="30">
+      <button type="button" name="button" onclick="recupMdp()">Envoyer un mail</button>
+    </div>
+
+    <div id="failNotFound" style="display:none">
+      Oups l'email exsiste pas
+    </div>
+
+    <div id="fail" style="display:none">
+      Oups l'envoie du mail a echouer merci de résayer
+    </div>
+
+    <div id="win" style="display:none">
+      Le mail a bien été envoyer si vous ne le voyer pas dans votre boite mail verifier les spams
+    </div>
+  </body>
+</html>

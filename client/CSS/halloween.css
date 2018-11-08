@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css?family=Mali');
+
+/*----------------------------Acceuil-----------------------*/
+body {
+    background: url(http://ville.saint-remi.qc.ca/wp-content/uploads/2018/10/Halloween.png) fixed no-repeat top right;
+    background-size: cover;
+    margin: auto;
+    color: black;
+    font-weight: bold;
+    text-shadow: 0px, 0px, 7px, #ffffff;
+}
+
+nav
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    border-color: black;
+	border-radius: 10px;
+	border-style: inset;
+
+}
+}
+
+#bodyAccueil {
+	margin: 10px 0 ;
+	padding: 0 ;
+	text-align: center ;
+	font: 0.8em "Trebuchet MS", Mali, sans-serif ;
+	background-image:linear-gradient(#9D9AA2, #FFFFFF);
+	background-size: cover;
+	
+}
+
+div#conteneur
+{
+	width: 100% ;
+	margin: 0 auto ;
+	text-align: left ;
+	border: 2px solid #bb5842;
+	background: #fff ;
+}
+
+ul#menu
+{
+	height: 35px ;
+	margin: 0 ;
+	padding: 0 ;
+	list-style-type: none ;
+}
+
+ul#menu li
+{
+	float: left ;
+	text-align: center ;
+}
+
+ul#menu li a
+{
+	width: 150px ;
+	line-height: 25px ;
+	font-size: 1.2em ;
+	font-weight: bold ;
+	letter-spacing: 2px ;
+	color: #fff ;
+	display: block ;
+	text-decoration: none ;
+	border-right: 2px solid #dea ;
+}
+
+p.Titre {
+	font-size: 50px;
+	font-family: "Mali", Mali;
+	text-align: center;
+	margin-top: 2%;
+}
+
+.descService
+{
+	font-size: 16;
+	font-style: oblique;
+	text-align: center;
+}
+
+p .Connexion {
+	position: relative;
+	left: 27%;
+}
+
+p .Deconnexion {
+	position: relative;
+	left: 27%;
+}
+
+p .Theo {
+	position: relative;
+	left: 28%;
+}
+
+.BarreDeRecherche {
+	margin-top: 5%;
+}
+
+ul .Bouton {
+	background-size: cover;
+	background-image: url("../donne/img/loupe.png");
+	width: 21px;
+	height: 21px;
+	border: unset;
+}
+
+ul .Bouton:focus {
+	border-color: unset;
+}
+
+.ImageRecetteAccueil .Bouton {
+	background-size: cover;
+	background-image: url("../donne/img/loupe.png");
+	width: 300px;
+	height: 300px;
+	margin-right: 2%;
+	margin-top: 50px;
+}
+
+.ImageRecetteAccueil {
+	margin-top: 10%;
+}
+
+/*---------------------------- creationRecette ----------------------------*/
+
+.bodyRecette {
+	font: 0.8em "Trebuchet MS", Mali, sans-serif ;
+	background-image:linear-gradient(#9D9AA2, #FFFFFF);
+	background-size: cover;
+
+}
+
+.reglesCreation
+{
+	font-size: 19px;
+}
+
+table input {
+	width: 95%;
+
+}
+
+table button {
+	width: 95%;
+}
+
+table {
+	width: 40%;
+	margin-left: 22px;
+
+	}
+
+table td {
+	padding: 20px 10px;
+
+	}
+
+.tableHead {
+	background-image: linear-gradient(30deg, #A60A0A, #E60000);
+	color: white;
+	text-align: center;
+	font-size:18px;
+	font-weight: bold;
+	}
+
+.tableFooter {
+	font-size: 15px;
+	color: black;
+	text-align: center;
+
+}
+
+.buttonAdd {
+	background-color: #585858;
+	border-radius:9px;
+	border:4px solid #000000;
+	font-family: "Mali", Mali;
+	font-size:20px;
+	color:#1DC916;
+}
+
+.buttonDelete {
+	background-color: #585858;
+	border-radius:9px;
+	border:4px solid #000000;
+	font-family: "Mali", Mali;
+	font-size:20px;
+	color: #FF0000;
+}
+
+#recetteNom
+{
+	width: 125px;
+}
+
+#descriptionC
+{
+	max-width: 300px;
+	max-height: 100px;
+	min-width: 200px;
+	min-height: 50px;
+}
+
+#descriptionL
+{
+	max-width: 300px;
+	max-height: 100px;
+	min-width: 200px;
+	min-height: 50px;
+}
+
+.buttonCreate
+{
+	width: 100px;
+	height: 75px;
+}
+
+/*----------------------------rechercheRecette------------------------------*/
+
+.pageControlleur * {
+	display: inline-block;
+}
+
+/*---------------------------- affichageRecette ----------------------------*/
+
+body
+{
+	font: 0.8em "Trebuchet MS", Mali, sans-serif ;
+	background-size: cover;
+	margin: 0 0 0 0;
+	padding-bottom: 10px;
+	padding: 15px;
+}
+
+#win
+{
+	background: #ff8b8b;
+    border-radius: 1px;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 494px;
+    padding: 10px;
+    width: 50%;
+    border-style: inset;
+}
+
+#contenu
+{
+	display: block;
+    padding: 10px 0 10px 0;
+}
+
+#win img {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+#win .descriptionRecette
+{
+	margin-left: 9vw;
+    height: 8vw;
+    width: 82%;
+}
+
+/*----------------------------- previewRecette ----------------------------*/
+.container{
+  	background: #ff8b8b;
+  	margin: auto;
+  	padding: 5px;
+  	width: 700px;
+	margin-bottom: 20px;
+	border-color: black;
+	border-radius: 10px;
+	border-style: inset;
+}
+.container h1{
+  	float: left;
+  	font-size: 20px;
+  	font-weight: bold;
+  	text-transform: uppercase;
+  	margin: 0px;
+  	margin-bottom: 5px;
+  	width: 100%;
+}
+
+.container .desc{
+  	display: inline-block;
+  	text-align: justify;
+  	margin-left: 15px;
+  	width: 55%;
+}
+
+.burn{
+  	background: url('https://png2.kisspng.com/sh/0a50041c9d994ca7e3715151756ceffd/L0KzQYm3UsIxN5Zqj5H0aYP2gLBuTfpia5wyh591YX73dcP1TgB2daFwgdC2aHHvfLFAhfVvNZl0iuR4cj3rcb3zjCdmbZ8yiOd2cHvsfn79hfN1d6MyhdN9ZYLscb20VfE5a5Y6SNU8NHK1dIa1WcI1OWk4T6g6NUG8QYm6UcE3OmI6UZD5bne=/kisspng-jack-o-lantern-pumpkin-halloween-horror-halloween-pumpkin-vector-material-5a8ce50c34b2d5.9241837615191831162159.png');
+  	background-position: right;
+  	background-repeat: no-repeat;
+  	background-size: 35px;
+  	float: right;
+  	font-size: 35px;
+  	height: 35px;
+  	text-align: center;
+  	padding-right: 35px;
+}
+
+.container img{
+	display: inline-block;
+  	width: 25%;
+	height: 25%;
+}
+
+.container a img{
+  	float: right;
+  	margin-left: 50px;
+  	margin-top: -35px;
+  	width: 30px;
+	height: 30px;
+}

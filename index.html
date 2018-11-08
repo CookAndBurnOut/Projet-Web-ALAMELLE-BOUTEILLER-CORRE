@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="client/JS/utile.js"></script>
+	<script type="text/javascript" src="client/JS/connection.js"></script>
+	<script type="text/javascript" src="client/JS/recette.js"></script>
+	<script type="text/javascript" src="client/JS/lastPublicRecette.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="client/CSS/index.css">
+
+</head>
+<body>
+	<header>
+		<h1>COOK AND BURN</h1>
+		<nav>
+			<a href="client/HTML/rechercheRecette.html"><button>Recherche</button></a>
+			<div id='deconnectionDiv' style="display: none;">
+				<label for="connectionLogin">Identifiant : </label>
+				<input type="text" name="connectionLogin" id="connectionLogin">
+				<label for="connectionMdp">Mot de passe : </label>
+				<input type="password" name="connectionMdp" id="connectionMdp">
+				<button onclick="connection()">Connexion</button>
+				<a href="client/HTML/recupMotDePasse.html"><button>Recruperation mot de passe</button></a>
+			</div>
+			<div id='connectionDiv' style="display: none;">
+				<a href="client/HTML/creationRecette.html"><button>Création</button></a>
+				<a href="client/HTML/profil.html"><button>Profil</button></a>
+				<button onclick="deconnection()">Deconnexion</button>
+			</div>
+			<div id='onlyAdmin' style="display: none;">
+				<a href="client/HTML/parametre.html"><button>Paramètres</button></a>
+			</div>
+		</nav>
+	</header>
+
+	<p class="descService">Cook and Burn est un site web permettant la création et le partage de recette de cuisine centrées autour du thème du barbecue !
+	Ce site recense bon nombre de recette auxquelles vous pouvez accéder en utilisant la barre de recherche !<br><br>
+
+	Voici la dernière recette très appréciée des utilisateurs :</p>
+
+	<div id="previewRecette">
+	</div>
+
+</body>
+</html>

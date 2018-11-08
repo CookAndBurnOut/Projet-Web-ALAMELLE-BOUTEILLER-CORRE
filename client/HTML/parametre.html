@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parametre</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../JS/utile.js"></script>
+	<script type="text/javascript" src="../JS/connection.js"></script>
+	<script type="text/javascript" src="../JS/parametre.js"></script>
+	<link rel="stylesheet" type="text/css" href="../CSS/index.css">
+</head>
+<body>
+	<header>
+		<h1>COOK AND BURN</h1>
+		<nav>
+			<a href="../../index.html"><button>Accueil</button></a>
+			<a href="rechercheRecette.html"><button>Recherche</button></a>
+			<div id='deconnectionDiv' style="display: none;">
+				<label for="connectionLogin">Identifiant : </label>
+				<input type="text" name="connectionLogin" id="connectionLogin">
+				<label for="connectionMdp">Mot de passe : </label>
+				<input type="password" name="connectionMdp" id="connectionMdp">
+				<button onclick="connection()">Connexion</button>
+				<a href="recupMotDePasse.html"><button>Recruperation mot de passe</button></a>
+			</div>
+			<div id='connectionDiv' style="display: none;">
+				<a href="creationRecette.html"><button>Création</button></a>
+				<a href="profil.html"><button>Profil</button></a>
+				<button onclick="deconnection()">Deconnexion</button>
+			</div>
+			<div id='onlyAdmin' style="display: none;">
+			</div>
+		</nav>
+	</header>
+	<div id="isAdmin" style="display:none">
+		<h2>Parametre generale :</h2>
+		<div id="resultParam" style="display:none"></div>
+		<label for="generaleNbrRecettePage">Nombre de recette afficher par page :</label>
+		<input type="number" name="generaleNbrRecettePage" id="generaleNbrRecettePage">
+		<button type="button" name="button" onclick="appliquerButton()">Appliquer</button>
+		<h2>Utilisateur :</h2>
+		<div id="resultUser" style="display:none"></div>
+		<label for="email">Email :</label>
+		<input type="text" name="email" id="email">
+		<label for="login">Login :</label>
+		<input type="text" name="login" id="login">
+		<label for="nom">Nom :</label>
+		<input type="text" name="nom" id="nom">
+		<label for="mdp">Mot de passe :</label>
+		<input type="text" name="mdp" id="mdp">
+		<button type="button" name="button" onclick="addUtilisateur()">Ajouter un utilisateur</button>
+		<div id="listUtilisateurResult" style="display:none"></div>
+		<div id="listUtilisateur" style="display:none">
+		</div>
+	</div>
+	<div id="notAdmin" style="display:none">
+		Oups vous n'avez pas les permision d'acces a cette page
+	</div>
+</body>

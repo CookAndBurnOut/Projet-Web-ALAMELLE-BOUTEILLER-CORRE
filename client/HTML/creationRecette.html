@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+	    |\___/|
+	    )     (
+	   =\     /=
+	     )===(      ___________.__
+	    /     \     \__    ___/|  |__   ____  ____
+	    |     |  	  |    |   |  |  \_/ __ \/  _ \
+	   /       \	  |    |   |   Y  \  ___(  <_> )
+	   \       /	  |____|   |___|  /\___  >____/
+	    \_____/ 	                \/     \/
+			 	 ____   ___.__                            __
+			   \   \ /   |__| ____   ____  ____   _____/  |_
+		 ('>  \   Y   /|  |/    \_/ ____/ __ \ /    \   __\
+		 /V\   \     / |  |   |  \  \__\  ___/|   |  |  |
+		<(_)    \___/  |__|___|  /\___  \___  |___|  |__|
+		  ~~	               \/     \/    \/     \/
+-->
+
+	<title class="Titre">Test</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../JS/utile.js"></script>
+	<script type="text/javascript" src="../JS/connection.js"></script>
+	<script type="text/javascript" src="../JS/scriptCreationRecette.js"></script>
+	<script type="text/javascript" src="../JS/nav.js"></script>
+	<link rel="stylesheet" type="text/css" href="../CSS/index.css">
+	<style type="text/css">
+		table {
+		    border-collapse: collapse;
+		}
+
+		table, tfoot, thead, td {
+		    border: 1px solid black;
+		}
+	</style>
+</head>
+
+
+<body class="bodyRecette">
+	<header>
+		<h1>COOK AND BURN</h1>
+		<nav>
+			<a href="../../index.html"><button>Accueil</button></a>
+			<a href="rechercheRecette.html"><button>Recherche</button></a>
+			<div id='deconnectionDiv' style="display: none;">
+				<label for="connectionLogin">Identifiant : </label>
+				<input type="text" name="connectionLogin" id="connectionLogin">
+				<label for="connectionMdp">Mot de passe : </label>
+				<input type="password" name="connectionMdp" id="connectionMdp">
+				<button onclick="connection()">Connexion</button>
+			</div>
+			<div id='connectionDiv' style="display: none;">
+				<a href="profil.html"><button>Profil</button></a>
+				<button onclick="deconnection()">Deconnexion</button>
+			</div>
+			<div id='onlyAdmin' style="display: none;">
+				<a href="parametre.html"><button>Paramètres</button></a>
+			</div>
+		</nav>
+	</header>
+	<div id="notConnect" style="display: none;">
+		Vous devez etre connecter pour accéder a cette page !
+	</div>
+
+	<div id="isConnect" style="display: none;">
+		<p class="reglesCreation">Attention des moderateurs verifiront les tags, la recette pourrait être supprimée si elle ne respecte pas les règles de communication</p>
+		<h3>Caractéristiques :</h3>
+		<table id="tableRecette">
+			<tr class="tableHead">
+				<td>Nom</td>
+				<td>Durée de la recette</td>
+				<td>Desc courte</td>
+				<td>Desc longue</td>
+				<td>Nb personne</td>
+				<td>Url img</td>
+			</tr>
+			<tr class="tableFooter">
+				<td><input type="text" id="recetteNom" name="recetteNom" maxlength="250"></td>
+				<td>
+					<input type="number" id="recetteDuree" name="recetteDuree" maxlength="20">
+					<select id="recetteTypeDuree" name="recetteTypeDuree">
+						<option value="h">Heure</option>
+						<option value="m">Minute</option>
+						<option value="j">Jour</option>
+					</select>
+				</td>
+				<td><textarea id="descriptionC" name="descriptionC" maxlength="100" minlength="1"></textarea></td>
+				<td><textarea id="descriptionL" name="descriptionL" maxlength="400" minlength="1"></textarea></td>
+				<td><input type="number" id="nbrPersonne" name="nbrPersonne" maxlength="20"></td>
+				<td><input type="text" id="ulrImg" name="urlImg" maxlength="500"></td>
+			</tr>
+		</table>
+
+		<h3>Ingredient :</h3>
+		<table id="tableIngredient">
+			<tr class="tableHead">
+				<td>Nom</td>
+				<td>Quantiée</td>
+				<td>Type</td>
+			</tr>
+			<tr class="tableFooter">
+				<td><input type="text" id="ingredientNom" name="ingredientNom" maxlength="50"></td>
+				<td><input type="number" id="ingredientQuantitee" name="ingredientQuantitee" maxlength="20"></td>
+				<td>
+					<select id="ingredientType" name="ingredientType">
+						<option value="quantitee">quantitée</option>
+						<option value="mg">mg</option>
+						<option value="g">g</option>
+						<option value="kg">kg</option>
+						<option value="ml">ml</option>
+						<option value="cl">cl</option>
+						<option value="l">l</option>
+					</select>
+				</td>
+				<td><button class="buttonAdd" onclick="ajouterIngredient()">+</button></td>
+					</tr>
+		</table>
+		<br>
+		<h3>Etapes :</h3>
+		<table id="tableEtape">
+			<tr class="tableHead">
+				<td>Description</td>
+			</tr>
+			<tr class="tableFooter">
+				<td><input type="text" id="etapeDescription" name="etapeDescription" maxlength="500"></td>
+				<td><button class="buttonAdd" onclick="ajouterEtape()">+</button></td>
+			</tr>
+		</table>
+		<h3>Tag :</h3>
+
+		<table id="tableTag">
+			<tr class="tableHead">
+				<td>Nom</td>
+			</tr>
+			<tr class="tableFooter">
+				<td><input type="text" id="tagNom" name="tagNom" maxlength="150"></td>
+				<td><button class="buttonAdd" onclick="ajouterTag()">+</button></td>
+			</tr>
+		</table>
+
+		<button onclick="creationRecette()">Créer</button>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../JS/utile.js"></script>
+	<script type="text/javascript" src="../JS/connection.js"></script>
+	<script type="text/javascript" src="../JS/profilScript.js"></script>
+	<link rel="stylesheet" type="text/css" href="../CSS/index.css">
+	<title>Profil</title>
+</head>
+
+<body>
+	<header>
+		<h1>COOK AND BURN</h1>
+		<nav>
+			<a href="../../index.html"><button>Accueil</button></a>
+			<a href="rechercheRecette.html"><button>Recherche</button></a>
+			
+			<div id='deconnectionDiv' style="display: none;">
+				<label for="connectionLogin">Identifiant : </label>
+				<input type="text" name="connectionLogin" id="connectionLogin">
+				<label for="connectionMdp">Mot de passe : </label>
+				<input type="password" name="connectionMdp" id="connectionMdp">
+				<button onclick="connection()">Connexion</button>
+			</div>
+			<div id='connectionDiv' style="display: none;">
+				<a href="creationRecette.html"><button>Création</button></a>
+				<button onclick="deconnection()">Deconnexion</button>
+			</div>
+			<div id='onlyAdmin' style="display: none;">
+				<a href="parametre.html"><button>Paramètres</button></a>
+			</div>
+		</nav>
+	</header>
+
+	<div id="notConnect" style="display: none;">
+		Vous devais etre connecter pour accéder a cette page !
+	</div>
+
+	<div id="isConnect" style="display: none;">
+		<h2>Votre profil</h2>
+		<h3>Changement de mot de passe</h3>
+			<label for="newMdp">Nouveau mot de passe :</label>
+			<input type="text" name="newMdp" id="newMdp">
+			<label for="confirmMdp">Confirmer le nouveau mot de passe :</label>
+			<input type="text" name="confirmMdp" id="confirmMdp">
+			<button id="bouttonChangementMdp" onclick="changementMdp()">Changer votre mot de passe</button>
+		<h3>Liste de vos recette</h3>
+		<div id="listRecetteResult" style="display:none"></div>
+		<div id="listRecette">
+
+		</div>
+	</div>
+</body>
+</html>

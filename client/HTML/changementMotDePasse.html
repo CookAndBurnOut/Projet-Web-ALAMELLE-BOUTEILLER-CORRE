@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recupération Mot de passe</title>
+    <script type="text/javascript" src="../JS/utile.js"></script>
+    <script type="text/javascript" src="../JS/changementMdp.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+  </head>
+  <body>
+    <h1>COOK AND BURN</h1>
+
+    <div id="winLien" style="display:none;">
+      <label for="mdpNew">Nouveau mot de passe :</label>
+      <input id="mdpNew" type="text" name="mdpNew">
+
+      <label for="mdpConf">Confirmer le mot de passe :</label>
+      <input id="mdpConf" type="text" name="mdpConf">
+
+      <button type="button" name="button" onclick="changerMdp()">Changer</button>
+    </div>
+
+    <div id="failLien" style="display:none;">
+      Oups le lien que vous utilisez ne semble pas valide
+    </div>
+
+    <div id="failMdp" style="display:none;">
+      Oups nous n'avons pas pu changer votre mot de passe veuillez réessayer
+    </div>
+
+    <div id="winMdp" style="display:none;">
+      Le mot de passe a bien été changé
+    </div>
+  </body>
+</html>

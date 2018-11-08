@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../JS/utile.js"></script>
+    <script type="text/javascript" src="../JS/connection.js"></script>
+    <script type="text/javascript" src="../JS/recette.js"></script>
+    <script type="text/javascript" src="../JS/recherche.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <title>Recherche</title>
+  </head>
+  <body>
+  <header>
+    <h1>COOK AND BURN</h1>
+    <nav>
+      <a href="../../index.html"><button>Accueil</button></a>
+      <div id='deconnectionDiv' style="display: none;">
+        <label for="connectionLogin">Identifiant : </label>
+        <input type="text" name="connectionLogin" id="connectionLogin">
+        <label for="connectionMdp">Mot de passe : </label>
+        <input type="password" name="connectionMdp" id="connectionMdp">
+        <button onclick="connection()">Connexion</button>
+      </div>
+      <div id='connectionDiv' style="display: none;">
+        <a href="creationRecette.html"><button>Création</button></a>
+        <a href="profil.html"><button>Profil</button></a>
+        <button onclick="deconnection()">Deconnexion</button> 
+      </div>
+      <div id='onlyAdmin' style="display: none;">
+        <a href="parametre.html"><button>Paramètres</button></a>
+      </div>
+    </nav>
+  </header>
+    <div id="rechercheSimple">
+      <label for="recherche">Valeur : </label>
+      <input id="recherche" type="text" name="recherche">
+      <button onclick="rechercheButton()" type="button">Rechercher</button>
+    </div>
+    <div id="rechercheResult" style="display:none;">
+      <div id="previewRecette">
+
+      </div>
+      <div class="pageControlleur">
+        <button type="button" onclick="pagePrev()" name="prev"><</button>
+        <div id="page"></div>
+        <button type="button" onclick="pageSuiv()" name="next">></button>
+      </div>
+    </div>
+
+    <div id="failRecherche" style="display:none;">
+      Oups votre reqûete ne peut aboutir, aucune recette de ce type n'a été trouvé :)
+    </div>
+
+
+  </body>
+</html>
